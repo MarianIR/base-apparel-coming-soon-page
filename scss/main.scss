@@ -1,0 +1,119 @@
+@import "variables", "reset";
+
+body {
+  width: 100%;
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-section {
+  width: 100%;
+
+  .logo {
+    margin: 2rem;
+    width: 15rem;
+    height: 3rem;
+    @media (min-width: 1024px) {
+      position: fixed;
+      margin: -8rem 0 5rem 26rem;
+    }
+  }
+  .content-section {
+    width: 100%;
+    @media (min-width: 1024px) {
+      margin-top: 10rem;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 60rem;
+    }
+    .main-image {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 40rem;
+      height: 30rem;
+      background-image: url("/images/hero-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      @media (min-width: 1024px) {
+        background-image: url("/images/hero-desktop.jpg");
+        height: 70rem;
+        margin-top: 0;
+      }
+    }
+    .article-content {
+      margin: auto;
+      width: 90%;
+      text-align: center;
+      max-width: 50rem;
+      @media (min-width: 1024px) {
+        text-align: left;
+        margin: 0;
+      }
+      .main-header {
+        color: $neutralColor;
+        font-size: clamp(4rem, 6vw, 7rem);
+        font-weight: bold;
+        text-transform: uppercase;
+        strong {
+          color: $primariColor1;
+          font-weight: 300;
+        }
+      }
+      .article-paragraph {
+        margin: 2rem auto;
+        font-size: clamp($fontSize, 6vw, 3rem);
+        color: $primariColor1;
+      }
+      .send-email {
+        width: 100%;
+        .email-input {
+          width: 80%;
+          padding: 1.5rem 0;
+          border: 0.1rem solid $primariColor1;
+          border-radius: 5rem;
+          outline: none;
+          font-size: $fontSize;
+          &::placeholder {
+            font-size: 1.2rem;
+            color: $primariColor1;
+            padding: 2rem;
+            margin-left: 2rem;
+          }
+        }
+        .error {
+        }
+        .send-button {
+          border: none;
+          border-radius: 5rem;
+          padding: 1.69rem 3rem;
+          background: $gradientColor2;
+          margin-left: -7.5rem;
+          cursor: pointer;
+          .arrow-icon {
+          }
+        }
+        .provide-email {
+          color: $primariColor2;
+          margin: 1rem 2rem;
+          font-size: $fontSize;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  margin: 5rem auto;
+  font-size: 1.8rem;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $primariColor2;
+    font-weight: bold;
+  }
+}
